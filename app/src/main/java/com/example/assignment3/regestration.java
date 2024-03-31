@@ -68,11 +68,11 @@ public class regestration extends AppCompatActivity {
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
-                                    progressBar.setVisibility(View.GONE);
-                                    Toast.makeText(regestration.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
-
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
                                 } else {
                                     Toast.makeText(regestration.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
