@@ -38,10 +38,24 @@
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="gone" />
+    
     <Button
         android:layout_marginTop="20px"
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login" />
+
+    <TextView
+        android:id="@+id/RegisterNow"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:text="@string/dont_have_an_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
